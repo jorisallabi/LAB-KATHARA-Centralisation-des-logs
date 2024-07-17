@@ -1,0 +1,10 @@
+ip address add 20.3.1.2/24 dev eth0
+ip route add default via 20.3.1.1 dev eth0
+systemctl enable elasticsearch.service
+systemctl start elasticsearch.service
+systemctl enable logstash
+systemctl enable kibana
+systemctl start kibana
+systemctl enable sshd.service
+systemctl start sshd.service
+
